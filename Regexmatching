@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+namespace exp2staticclass
+{
+ internal class Program
+ {
+ 
+ static void Main(string[] args)
+ {
+ // Regex Matching
+ string input = "Hello, World!";
+ string pattern = @"\bHello\b";
+ bool isMatch = Regex.IsMatch(input, pattern);
+ Console.WriteLine("Regex Match: " + isMatch);
+ // Pattern Matching
+ object obj = 123;
+ if (obj is int number)
+ {
+ Console.WriteLine("Pattern Match: " + number);
+ }
+ else
+ {
+ Console.WriteLine("Pattern Match Failed");
+ }
+ Console.ReadLine();
+ }
+ }
+}
